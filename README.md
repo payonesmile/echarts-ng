@@ -1,75 +1,22 @@
 # echarts-ng
 echarts  angularjs 最简单的版本
 
-
-需要引入文件：
-script type='text/javascript' src="angular-1.4.7/angular.js"
-script type='text/javascript' src="echarts-2.2.7/build/dist/echarts-all.js"
-加上下面的
-#echarts-ng.js
-
-angular.module('echarts-ng', [])
-    .directive('echarts', function () {
-        var getMergedOptions = function (element, options, series) {
-            var defaultOptions = {}
-            var mergedOptions = {}
-            if (options) {
-                mergedOptions = $.extend(true, {}, defaultOptions, options);
-            } else {
-                mergedOptions = defaultOptions;
-            }
-            if(series) {
-              mergedOptions.series = series
-            }
-            return mergedOptions
-        }
-
-        return {
-            restrict: 'A',
-            replace: false,
-            scope: {
-                options: '='
-            },
-            link: function (scope, element, attrs) {
-
-                var mergedOptions = getMergedOptions(element, scope.options);
-				//console.log(scope.options);
-          
-				var myChart = echarts.init(document.getElementById(attrs.id));
-				//生成图表
-				myChart.setOption(mergedOptions);
-                scope.$watch("options", function (newOptions, oldOptions, scope) {
-                    //do nothing when called on registration
-                    if (newOptions === oldOptions) return;
-					//图表清空
-					myChart.clear();
-                    var mergedOptions = getMergedOptions(element, newOptions);
-					//生成图表
-					myChart.setOption(mergedOptions);
-
-                }, true);
-			
-            }
-        }
-    });
-
+<br/>
+需要引入文件，不同版本大家各自下载：<br/>
+angular.js<br/>
+echarts-all.js<br/>
+echarts-ng.js<br/>
 
 
 使用方法：
 #html
-<div ng-app="myapp">
-    <div ng-controller="myctrl">
 
-<div id="chart1" options="echarts.options" style="height:400px;" echarts></div>
-
-    </div>
-</div>
-
+&lt;div id="chart1" options="echarts.options" style="height:400px;" echarts>&lt;/div>
 
 #javascript
 
-script type='text/javascript'
 //依赖echarts-ng
+
 var myapp = angular.module('myapp',['echarts-ng']);
 myapp.controller('myctrl', function ($scope) {
         $scope.echarts = {
