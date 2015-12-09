@@ -16,7 +16,8 @@ echarts-ng.js<br/>
 #javascript
 
 //依赖echarts-ng
-
+<code>
+<pre>
 var myapp = angular.module('myapp',['echarts-ng']);
 myapp.controller('myctrl', function ($scope) {
         $scope.echarts = {
@@ -96,5 +97,6 @@ myapp.controller('myctrl', function ($scope) {
 
  
 });
-
+</code>
+</pre>
 
