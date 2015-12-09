@@ -1,5 +1,5 @@
 # echarts-ng
-echarts  angularjs 最简单的版本
+echarts  angularjs 最简单的版本，轻藕合、全兼容、免升级，本人看了其它几个发现写的过于复杂，不宜于学习和使用，所以分享下代码
 
 <br/>
 需要引入文件，不同版本大家各自下载：<br/>
