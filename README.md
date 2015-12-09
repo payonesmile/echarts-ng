@@ -3,8 +3,8 @@ echarts  angularjs 最简单的版本
 
 
 需要引入文件：
-<script type='text/javascript' src="angular-1.4.7/angular.js"></script>
-<script type='text/javascript' src="echarts-2.2.7/build/dist/echarts-all.js"></script>
+script type='text/javascript' src="angular-1.4.7/angular.js"
+script type='text/javascript' src="echarts-2.2.7/build/dist/echarts-all.js"
 加上下面的
 #echarts-ng.js
 
@@ -68,7 +68,7 @@ angular.module('echarts-ng', [])
 
 #javascript
 
-<script type='text/javascript'>
+script type='text/javascript'
 //依赖echarts-ng
 var myapp = angular.module('myapp',['echarts-ng']);
 myapp.controller('myctrl', function ($scope) {
@@ -154,4 +154,4 @@ myapp.controller('myctrl', function ($scope) {
 
 
 
-</script>
+/script
