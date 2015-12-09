@@ -3,14 +3,14 @@ echarts  angularjs 最简单的版本
 
 <br/>
 需要引入文件，不同版本大家各自下载：<br/>
-<pre>
+<pre><code>
 <script type='text/javascript' src="angular-1.4.7/angular.js"></script>
 <script type='text/javascript' src="echarts-2.2.7/build/dist/echarts-all.js"></script>
 <script type='text/javascript' src="echarts-ng/echarts-ng.js"></script>
-</pre>
+</code></pre>
 使用方法：
 #html
-<code><pre>
+<pre><code>
   <div ng-app="myapp">
     <div ng-controller="myctrl">
         <div id="chart1" options="echarts.options" style="height:400px;" echarts></div>
