@@ -151,7 +151,3 @@ myapp.controller('myctrl', function ($scope) {
 });
 
 
-
-
-
-/script
