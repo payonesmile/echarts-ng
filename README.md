@@ -3,21 +3,28 @@ echarts  angularjs 最简单的版本
 
 <br/>
 需要引入文件，不同版本大家各自下载：<br/>
-angular.js<br/>
-echarts-all.js<br/>
-echarts-ng.js<br/>
-
-
+<code><pre>
+<script type='text/javascript' src="angular-1.4.7/angular.js"></script>
+<script type='text/javascript' src="echarts-2.2.7/build/dist/echarts-all.js"></script>
+<script type='text/javascript' src="echarts-ng/echarts-ng.js"></script>
+</code></pre>
 使用方法：
 #html
+<code><pre>
+  <div ng-app="myapp">
+    <div ng-controller="myctrl">
+        <div id="chart1" options="echarts.options" style="height:400px;" echarts></div>
 
-&lt;div id="chart1" options="echarts.options" style="height:400px;" echarts>&lt;/div>
+	<button type="button" ng-click="btnOptions()">button</button>
+    </div>
+</div>
+</code></pre>
+
 
 #javascript
 
 //依赖echarts-ng
-<code>
-<pre>
+<code><pre>
 var myapp = angular.module('myapp',['echarts-ng']);
 myapp.controller('myctrl', function ($scope) {
         $scope.echarts = {
