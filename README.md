@@ -3,11 +3,11 @@ echarts  angularjs 最简单的版本
 
 <br/>
 需要引入文件，不同版本大家各自下载：<br/>
-<code>
+<pre>
 <script type='text/javascript' src="angular-1.4.7/angular.js"></script>
 <script type='text/javascript' src="echarts-2.2.7/build/dist/echarts-all.js"></script>
 <script type='text/javascript' src="echarts-ng/echarts-ng.js"></script>
-</code>
+</pre>
 使用方法：
 #html
 <code><pre>
